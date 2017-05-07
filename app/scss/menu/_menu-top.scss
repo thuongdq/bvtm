@@ -1,19 +1,21 @@
 .menu-top {
     margin-bottom: 4px;
     display: table;
-    background: #fff;
-    @include border(0px, 1px solid #a0bcf5, 1px solid #a0bcf5, 1px solid #a0bcf5);
-    @include border-radius(0px, 0px, 4px, 4px);
+    background: none;
     .container-fluid {
         padding: 0px;
+        background: #0477a1;
+        border-radius: 4px;
         .navbar-header {
             button {
                 margin: 0px;
                 border: 0px;
-                width: 98%;
+                width: calc(100% - 30px);
+                margin: 0px 15px;
+                @include multiple-background($url_icon, -42px -115px, 9999px, 0 -77px, repeat-x);
                 .sr-only {
                     display: block;
-                    color: #777;
+                    color: #fff;
                     clip: auto;
                     overflow: visible;
                     font-weight: 700;
@@ -21,40 +23,54 @@
                     width: 95%;
                     margin-top: -5px;
                 }
+                .icon-bar {
+                    background: #fff;
+                }
+            }
+            .navbar-brand {
+                color: #fff;
+                margin: 0 !important;
+                padding: 8px 19px 8px 8px;
+                height: auto;
+                font-size: 16.5px;
+                font-weight: 700;
+                line-height: 19px;
+                font-family: Arial;
+                text-transform: uppercase;
+                // background: url(../img/bg-icon.png) -42px -115px no-repeat, url(../img/bg-icon.png) 100% -153px no-repeat, url(../img/bg-icon.png) 0 -77px repeat-x;
+                @include multiple-background($url_icon, -42px -115px, -153px, 0 -77px, repeat-x);
+                background-color: rgba(0, 0, 0, 0);
             }
         }
         .navbar-collapse {
             // padding-left: 9px;
+            a {
+                color: #fff;
+                &:hover,
+                &:focus {
+                    color: #fff;
+                }
+            }
             margin: 0px -15px;
             &>.nav {
-                border: 1px solid #a0bcf5;
-                background: #fff;
-                border-radius: 4px;
                 .caret {
                     margin: 2px 15px 0 0;
+                    &:hover {
+                        background: none;
+                    }
                     // display: none;
                 }
                 &>li {
                     &.open>a {
                         background: none;
                     }
-                    &:hover,
-                    &:focus {
-                        background: none;
-                    }
                     &>a {
-                        padding: 0px;
-                        font-size: 16px;
-                        font-family: Arial, Helvetica, sans-serif;
+                        // padding: 0px;
+                        font-size: 14px;
+                        font-weight: bold;
                         display: block;
-                        color: #3b5998;
-                        line-height: 31px;
-                    }
-                    &:first-child {
-                        @include border-radius(4px, 0px, 4px, 0px);
-                    }
-                    &:last-child {
-                        @include border-radius( 0px, 4px, 0px, 4px);
+                        line-height: 35px;
+                        padding: 8px;
                     }
                 }
                 &:last-child {
@@ -63,7 +79,6 @@
                         border-radius: 2px;
                         a {
                             margin: 0px 10px;
-                            ;
                         }
                     }
                 }

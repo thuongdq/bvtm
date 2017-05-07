@@ -1,63 +1,63 @@
 @media (min-width: 992px) {
-    header {
-        .logo {
-            width: 18%;
-            display: block;
-        }
-        .banner {
-            width: calc(82% - 10px);
-            margin-left: 10px;
-        }
-    }
-    .page-content {
-        .left {
-            width: 18%;
-            float: left;
-            .menu-left-agency {
-                .panel-body {
-                    .menu-agency {
-                        li {
-                            padding: 0px 0px 0px 1px;
-                        }
-                    }
-                }
-            }
-        }
-        .main {
+    .menu-top {
+        .container-fluid {
+            border-radius: 0px;
+            background: url(../img/icon.png) 100% -38px no-repeat, url(../img/icon.png) repeat-x;
             padding: 0;
-            margin-left: 10px;
-            width: calc(82% - 10px);
-            left: 18%;
-            display: block;
-            float: right;
-            .content {
-                width: calc( 67% - 10px);
-                margin-right: 10px;
-                float: left;
-            }
-            .right {
-                float: right;
-                width: 33%;
-                display: block;
-                .video {
-                    .widget {
-                        a {
-                            margin-bottom: 20px;
-                        }
-                    }
+            height: 35px;
+            .navbar-header {
+                .navbar-brand {
+                    display: block;
                 }
             }
-            .menu-top {
-                width: 100%;
-                .container-fluid {
-                    .navbar-collapse {
-                        &>.nav {
-                            &>li {
-                                a {
-                                    padding: 0px 20px;
+            .navbar-collapse {
+                &>.nav {
+                    border: none;
+                    &>li {
+                        background: url(../img/bg-icon.png) -3px -190px no-repeat;
+                        &:first-child {
+                            background: none;
+                        }
+                        a {
+                            padding: 0px 20px;
+                        }
+                        .dropdown-menu {
+                            background: #0477a1;
+                            a {
+                                &:hover {
+                                    background: none;
+                                    font-weight: bold;
                                 }
                             }
                         }
+                    }
+                }
+            }
+            .navbar-form {
+                width: 111px;
+                margin: 6px 6px 6px 0;
+                padding: 0;
+                .input-sm {
+                    height: 23px;
+                }
+                .btn-sm {
+                    padding: 3px 4px;
+                    font-size: 12px;
+                    border-left: none;
+                    height: 23px;
+                }
+                .input-group-btn {
+                    width: 23px;
+                }
+            }
+        }
+        padding: 0px;
+        .container-fluid {
+            .navbar-collapse {
+                &>.nav {
+                    .caret {
+                        // margin: 2px 15px 0 0;
+                        display: none;
                     }
                 }
             }

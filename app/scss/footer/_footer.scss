@@ -1,26 +1,143 @@
 footer {
-    margin-top: -5px;
-    .panel {
-        margin-bottom: 4px;
-        border: 1px solid #9cb9f5;
-        .panel-heading {
-            padding: 0px;
-            border-bottom: 0px;
-            @extend %title_box;
-            h2 {
-                line-height: 36px;
-                display: block;
+    background: #fff;
+    border: 1px solid #74acc1;
+    border-radius: 4px;
+}
+
+.navbar-footer {
+    border-radius: 0px;
+    min-height: auto;
+    border-bottom: 2px solid #0477a1;
+    margin: 0px;
+    .container-fluid {
+        padding: 0px 5px;
+    }
+    .navbar-brand {
+        color: #087431;
+        text-transform: uppercase;
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: bold;
+        padding: 8px 15px 8px 25px;
+        height: auto;
+    }
+    .collapse {
+        display: inline-block;
+        margin: 0px;
+        width: 100%;
+        ul {
+            >li {
+                display: inline-block;
+                >a {
+                    color: #0477a1;
+                    font-size: 14px;
+                    line-height: 19px;
+                    font-weight: bold;
+                    padding: 9px 8px;
+                    background: url(../img/bg-icon.png) -2px -545px no-repeat;
+                }
+            }
+            &.navbar-right {
+                padding: 7px 0px;
+                display: inline-block;
+                float: right;
+                >li {
+                    border-radius: 4px;
+                    background: #ff904d;
+                }
+                a {
+                    background: url(../img/bg-icon.png) 3px -589px no-repeat;
+                    color: #fff !important;
+                    font-size: 12px !important;
+                    line-height: 19px !important;
+                    font-weight: normal !important;
+                    height: 22px;
+                    padding: 3px 7px 3px 27px;
+                    border-radius: 4px;
+                    &:hover,
+                    &:focus {
+                        background: url(../img/bg-icon.png) 3px -589px no-repeat;
+                        color: #fff !important;
+                        font-size: 12px !important;
+                        line-height: 19px !important;
+                        font-weight: normal !important;
+                        height: 22px;
+                        padding: 3px 7px 3px 27px;
+                        border-radius: 4px;
+                    }
+                }
             }
         }
-        .panel-body {
-            border-bottom: 14px solid #d4dbe8;
-            padding: 10px 0px;
+    }
+}
+
+footer {
+    ul.contact {
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+        background: #63c663;
+        display: inline-block;
+        width: 100%;
+        >li {
+            display: inline-block;
+            color: #fff;
+            font-size: 15px;
+            line-height: 19px;
+            font-weight: bold;
+            border-left: 1px solid #fff;
+            padding: 6px 8px;
+            height: 30px;
+            &:first-child {
+                border-left: none;
+            }
+        }
+    }
+    .address {
+        font-size: 13.5px;
+        line-height: 21px;
+    }
+    .hospital {
+        display: block;
+        float: left;
+        padding-left: 10px;
+        width: 61%;
+        padding-right: 9px;
+    }
+    .company {
+        display: block;
+        float: left;
+        width: 39%;
+        padding-left: 18px;
+    }
+    .hospital .social {
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+        float: right;
+        display: inline-block;
+        li {
+            float: left;
+            display: inline-block;
             a {
-                color: #4080ff;
+                text-indent: -999px;
+                display: inline-block;
+                width: 16px;
+                height: 16px;
             }
-            p {
-                margin-bottom: 5px;
-            }
+        }
+        .facebook {
+            background: url(../img/bg-icon.png) -1px -617px no-repeat;
+        }
+        .google {
+            background: url(../img/bg-icon.png) -18px -617px no-repeat;
+        }
+        .tweeter {
+            background: url(../img/bg-icon.png) -36px -617px no-repeat;
+        }
+        .DMCA {
+            width: 79px;
+            background: url('../img/bg-icon.png') no-repeat -3px -636px, url('../img/bg-icon.png') 100% -654px no-repeat;
         }
     }
 }

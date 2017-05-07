@@ -36,7 +36,7 @@ var config = {
         'app/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.min.js',
         'app/bower_components/smartmenus/jquery.smartmenus.js',
         'app/bower_components/smartmenus/addons/bootstrap/jquery.smartmenus.bootstrap.js',
-        // 'app/bower_components/lightslider-master/src/js/lightslider.js',
+        'app/bower_components/lightslider-master/src/js/lightslider.js',
         '!app/js/app.bundle.js'
     ],
     htmlListenFiles: [

@@ -1,16 +1,10 @@
 .left {
-    padding: 0px;
-    margin-top: 4px;
+    position: relative;
+    width: 20%;
+    right: 50%;
+    float: left;
     @import 'menu';
-    @import 'agency';
-    @import "../right/support";
-    @import 'extend';
-    // padding: 0px;
-    // @import "../right/search";
-    // 
-    // @import 'support';
-    // 
-    // @import "../right/video";
-    // @import "../right/certificate";
-    // @import 'extend';
+    @import 'healing';
+    @import 'related-diseases';
+    @import "extend";
 }

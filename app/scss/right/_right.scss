@@ -1,9 +1,9 @@
 .right {
-    padding: 0px;
-    float: right;
-    display: block;
-    @import "support";
-    @import "video";
-    @import "post-hot";
+    width: 30%;
+    float: left;
+    @import "menu";
+    @import "nutrition-exercise";
+    @import "science";
+    @import "prevent";
     @import "extend";
 }

@@ -1,41 +1,50 @@
 .menu {
-    @extend %box;
-    .slogan {
-        font: 300 24px/24px Arial;
-        padding: 6px 0 6px 5px;
-        display: inline-block;
-    }
-    .panel-heading {
-        border-radius: 0;
-        background-color: #d4dbe8;
-        border-left: 5px solid #3b5998;
-        border-bottom: none;
-        padding: 0px 0px 0px 5px;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    &>li {
         margin-bottom: 5px;
-        .title {
-            color: #000;
-            font-weight: bolder;
-            text-align: left;
-            line-height: 31px;
-            font-size: 16px;
+        a {
+            @include background($url_icon, repeat-x, 0px -232px);
+            border-radius: 4px;
+            padding: 0px 0px 0px 8px;
+            width: 100%;
+            display: block;
+            font-size: 16.5px;
+            line-height: 30px;
             font-weight: bold;
-            font-family: Arial, Helvetica, sans-serif;
+            color: #fff;
+            text-transform: uppercase;
+            &:last-child {
+                margin: 0px;
+            }
         }
-    }
-    .panel-body {
-        padding: 0px;
-        .nav-left> {
-            li {
+        &.current-post-ancestor,
+        &.current-category-parent,
+        &.current-menu-item {
+            .dropdown-menu {
+                display: block
+            }
+        }
+        .dropdown-menu {
+            position: relative;
+            display: none;
+            float: inherit;
+            background: none;
+            border: none;
+            box-shadow: none;
+            padding: 0px;
+            margin: 0px;
+            &>li {
                 &>a {
-                    display: block;
-                    padding: 2px 0px 2px 5px;
-                    color: #000;
-                    font-weight: bold;
+                    background: #0477a1;
+                    margin-bottom: 2px;
                     font-size: 13px;
-                    font-family: Arial, Helvetica, sans-serif;
+                    word-spacing: -0.5px;
+                    letter-spacing: -0.3px;
                 }
-                &.current-menu-item>a {
-                    color: #4080ff;
+                &:first-child>a {
+                    margin-top: 2px;
                 }
             }
         }
