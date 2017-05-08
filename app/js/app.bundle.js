@@ -184,6 +184,28 @@ $(window).load(function() {
 $(window).resize(function() {
     change_size();
 });
+
+$(".left").find(".menu").find(">li").each(function(index, item) {
+    parent = $(item).find("a");
+    child = $(item).find("ul").find("li");
+    if (child.length) {
+        newlink = child.first().find("a").attr("href");
+        parent.attr({
+            "href": newlink
+        });
+    }
+});
+
+$(".content").find(".category").each(function(index, item) {
+    parent = $(item).find(".panel-heading").find("a").first();
+    child = $(item).find("ul").find("li");
+    if (child.length) {
+        newlink = child.first().find("a").attr("href");
+        parent.attr({
+            "href": newlink
+        });
+    }
+});
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.

@@ -66,6 +66,7 @@ var gulp = require('gulp'),
     cleanCSS = require('gulp-clean-css'), //minify css
     uglify = require('gulp-uglify'), //minify js
     sass = require('gulp-sass'), //compile Sass->css
+    babel = require('gulp-babel'),
     del = require('del'),
     rename = require('gulp-rename'), //rename file
     concat = require('gulp-concat');
@@ -125,6 +126,12 @@ gulp.task("scripts", function() {
         // .pipe(uglify())
         .pipe(gulp.dest('app/js'))
         .pipe(reload({ stream: true }));
+});
+
+gulp.task("compile-es6", function() {
+    gulp.src('app/js/*.es6')
+        .pipe(babel({ presets: ["es2015"] }))
+        .pipe(gulp.dest('app/js'));
 });
 
 // ////////////////////////////////////////////////
@@ -234,6 +241,7 @@ gulp.task('build', ['build:copy', 'build:remove']);
 gulp.task('watch', function() {
     gulp.watch('app/scss/**/*.scss', ['compass']);
     gulp.watch(config.jsConcatFiles, ['scripts']);
+    gulp.watch('app/js/**/*.es6', ['compile-es6']);
     gulp.watch(config.cssListenFiles, ['min-styles']);
     gulp.watch(config.htmlListenFiles, ['html']);
 })

@@ -12,7 +12,8 @@
                 border: 0px;
                 width: calc(100% - 30px);
                 margin: 0px 15px;
-                @include multiple-background($url_icon, -42px -115px, 9999px, 0 -77px, repeat-x);
+                // @include multiple-background($url_icon, -42px -115px, 9999px, 0 -77px, repeat-x);
+                @include multiple-background($url_icon, 9999px, -38px, 0 0px, repeat-x);
                 .sr-only {
                     display: block;
                     color: #fff;

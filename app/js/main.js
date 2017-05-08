@@ -140,3 +140,25 @@ $(window).load(function() {
 $(window).resize(function() {
     change_size();
 });
+
+$(".left").find(".menu").find(">li").each(function(index, item) {
+    parent = $(item).find("a");
+    child = $(item).find("ul").find("li");
+    if (child.length) {
+        newlink = child.first().find("a").attr("href");
+        parent.attr({
+            "href": newlink
+        });
+    }
+});
+
+$(".content").find(".category").each(function(index, item) {
+    parent = $(item).find(".panel-heading").find("a").first();
+    child = $(item).find("ul").find("li");
+    if (child.length) {
+        newlink = child.first().find("a").attr("href");
+        parent.attr({
+            "href": newlink
+        });
+    }
+});

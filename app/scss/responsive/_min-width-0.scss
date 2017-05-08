@@ -87,37 +87,20 @@
         padding: 0px;
         .category {
             .panel-heading {
-                display: block;
                 width: 100%;
+                border-radius: 2px;
                 @include heading-home(100%, 100%, 100%, 100%, 100%, 100%);
-                &>div {
-                    border: none;
-                    a {
-                        text-align: left;
-                        padding-left: 10px;
-                        text-transform: none;
-                        line-height: 20px;
-                    }
-                    &.parent {
-                        position: relative;
+                h2 {
+                    padding: 0px;
+                    background: url(../img/icon.png) 0 -77px repeat-x;
+                }
+                .child {
+                    li {
+                        @include border(1px solid #fff, 0px, 0px, 0px);
                         a {
-                            text-align: center;
-                            text-transform: uppercase;
-                            line-height: 30px;
+                            text-transform: none;
+                            line-height: 20px;
                         }
-                        .caret-item {
-                            position: absolute;
-                            right: 10px;
-                            top: 5px;
-                            width: 20px;
-                            text-align: center;
-                            color: #fff;
-                            font-size: 14px;
-                            font-weight: bold;
-                        }
-                    }
-                    &.item {
-                        display: none;
                     }
                 }
             }
@@ -150,6 +133,36 @@
                                 border-bottom: none;
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        .menu-footer {
+            display: block;
+            &>a {
+                display: block;
+                text-indent: 0px;
+                min-width: 90px;
+            }
+            ul {
+                &:nth-child(2) {
+                    display: block;
+                    li {
+                        height: 22px;
+                        padding: 0 9px;
+                        background: url(../img/bg-icon.png) -2px -553px no-repeat;
+                        width: auto;
+                    }
+                }
+                &:nth-child(3) {
+                    display: block;
+                    float: right;
+                    a {
+                        text-indent: -9999px;
+                        display: block;
+                        padding: 3px 0px 3px 0px;
                     }
                 }
             }

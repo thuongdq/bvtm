@@ -5,6 +5,7 @@
     header {
         .logo,
         .banner {
+            height: 153px;
             img {
                 height: 153px;
             }
@@ -107,6 +108,30 @@
         .right {
             width: 30%;
             float: left;
+        }
+    }
+    footer {
+        .menu-footer {
+            &>a {
+                text-indent: 0px;
+                &::after {
+                    display: none;
+                }
+            }
+            ul {
+                &:nth-child(2) {
+                    li {
+                        padding: 0 6px;
+                    }
+                }
+                &:nth-child(3) {
+                    display: block;
+                    a {
+                        text-indent: 0px;
+                        padding: 3px 7px 3px 27px;
+                    }
+                }
+            }
         }
     }
 }
