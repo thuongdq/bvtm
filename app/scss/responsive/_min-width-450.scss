@@ -1,1 +1,77 @@
-@media (min-width: 450px) {}
+@media (min-width: 540px) {
+    .container {
+        width: 520px;
+    }
+    .content {
+        width: 100%;
+        .category {
+            .panel-heading {
+                display: block;
+                width: 100%;
+                @include heading-home(100%, 100%, 100%, 100%, 100%, 100%);
+                &>div {
+                    a {
+                        text-align: center;
+                        padding-left: 0px;
+                    }
+                    .caret-item {
+                        display: none;
+                    }
+                }
+            }
+            &.slideshow {
+                .panel-heading {
+                    @include heading-home(27%, 33%, 40%, 30%, 45%, 25%);
+                    &>div {
+                        display: block;
+                    }
+                }
+            }
+            &.list {
+                .panel-heading {
+                    @include heading-home(35%, 29.6%, 35.4%, 30%, 45%, 25%);
+                }
+            }
+            .panel-body {
+                .post-main {
+                    .main-view {
+                        width: 287px;
+                        padding-right: 5px;
+                        border-right: 1px dashed #5abb7f;
+                        .image-info {
+                            margin-right: 0px;
+                            img {
+                                height: 200px;
+                                width: 100%;
+                            }
+                            .transbox {
+                                width: 100%;
+                                h2 {
+                                    font-size: 15px;
+                                }
+                            }
+                        }
+                    }
+                    .hot-view {
+                        width: calc(100% - 287px);
+                        ul {
+                            li {
+                                border-bottom: 1px dotted #b7b7b7;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .left {
+        width: calc(40% - 5px);
+        float: left;
+        // left: 0px;
+    }
+    .right {
+        display: block;
+        width: calc(60% - 5px);
+        float: right;
+    }
+}

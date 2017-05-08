@@ -1,13 +1,11 @@
 .content {
     position: relative;
-    width: 50%;
-    left: 20%;
-    padding: 0px 8px;
+    // padding: 0px 8px;
     float: left;
     .category {
         border: 1px solid #0477a1;
         .panel-body {
-            padding: 0px 5px 3px 5px;
+            padding: 3px 5px 8px 5px;
             .post-main {
                 border-bottom: 1px solid #5abb7f;
                 display: inline-block;
@@ -74,21 +72,21 @@
                     ul {
                         list-style-type: none;
                         margin: 0px;
-                        padding: 0px 6px;
+                        padding: 4px 0px 4px 6px;
                     }
                 }
             }
         }
         &.slideshow {
-            .panel-heading {
-                @include heading-home(27%, 33%, 40%, 30%, 45%, 25%);
-            }
+            // .panel-heading {
+            //     @include heading-home(27%, 33%, 40%, 30%, 45%, 25%);
+            // }
             .panel-body {
                 .hot-view {
                     ul {
                         li {
-                            padding: 3px 0px 3px 7px;
-                            @include background($url_icon, no-repeat, -44px -446px);
+                            padding: 2px 0px 2px 6px;
+                            @include background($url_icon, no-repeat, -45px -446px);
                             border-bottom: 1px dotted #b7b7b7;
                             display: block;
                             a {
@@ -104,11 +102,16 @@
                             }
                             &:last-child {
                                 border: none;
+                                padding-bottom: 0px;
+                            }
+                            &:first-child {
+                                padding-top: 0px;
                             }
                         }
                     }
                 }
                 .post-other {
+                    margin: 0px -5px;
                     li {
                         padding: 0px 5px;
                         a {
@@ -155,16 +158,16 @@
             }
         }
         &.list {
-            .panel-heading {
-                @include heading-home(35%, 29.5%, 35.5%, 30%, 45%, 25%);
-            }
+            // .panel-heading {
+            //     @include heading-home(35%, 29.5%, 35.5%, 30%, 45%, 25%);
+            // }
             .panel-body {
                 .hot-view {
                     ul {
                         li {
                             border-bottom: 1px dashed #b5b5b5;
                             display: table;
-                            padding: 8px 0px;
+                            padding: 7px 0px;
                             width: 100%;
                             &:last-child {
                                 border-bottom: none;
@@ -196,15 +199,16 @@
                 .post-other {
                     .couple-item {
                         width: 100%;
-                        margin-bottom: -5px;
-                        display: block;
+                        display: table;
                         .item {
                             display: block;
-                            padding: 2px 0px 2px 15px;
+                            padding: 0px 0px 0px 15px;
                             width: 50%;
                             float: left;
                             @include background($url_icon, no-repeat, -38px -448px);
                             margin: 0px 0px;
+                            font-size: 14px;
+                            line-height: 17px;
                         }
                     }
                 }

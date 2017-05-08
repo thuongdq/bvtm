@@ -114,7 +114,7 @@ gulp.task("min-scripts", function() {
         .pipe(plumber())
         .pipe(rename({ suffix: '.min' }))
         .pipe(concat('app.bundle.js'))
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(gulp.dest('app/js'));
 });
 
@@ -122,7 +122,7 @@ gulp.task("scripts", function() {
     gulp.src(config.jsConcatFiles)
         .pipe(plumber())
         .pipe(concat('app.bundle.js'))
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(gulp.dest('app/js'))
         .pipe(reload({ stream: true }));
 });

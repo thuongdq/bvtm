@@ -1,8 +1,7 @@
 .left {
     position: relative;
-    width: 20%;
-    right: 50%;
     float: left;
+    padding: 0px;
     @import 'menu';
     @import 'healing';
     @import 'related-diseases';

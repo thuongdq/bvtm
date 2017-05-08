@@ -2,4 +2,20 @@
     .container {
         width: 1010px;
     }
+    .menu-top {
+        .container-fluid {
+            .navbar-collapse {
+                &>.nav {
+                    &>li {
+                        a {
+                            padding: 0px 5px;
+                        }
+                    }
+                }
+            }
+            .navbar-form {
+                width: 118px;
+            }
+        }
+    }
 }

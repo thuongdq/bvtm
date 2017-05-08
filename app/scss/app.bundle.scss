@@ -3,7 +3,7 @@
 @import "library/lightslider";
 // main.scss
 body {
-    background-color: #eee;
+    background-color: #e4e1e1;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
 }
@@ -15,6 +15,40 @@ a {
         text-decoration: none;
         background: none;
     }
+}
+
+.row,
+aside,
+article,
+section,
+.category-science,
+.category-prevent {
+    margin-bottom: 8px !important;
+}
+
+a {
+    text-decoration: none;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+aside>a,
+article>a,
+section>a {
+    display: table;
+    width: 100%;
+}
+
+aside>a>img,
+article>a>img,
+section>a>img {
+    width: 100%;
+}
+
+.page-content {
+    margin-bottom: 0px !important;
 }
 
 $url_icon:"../img/icon.png";
@@ -102,7 +136,7 @@ $url_icon:"../img/icon.png";
         list-style-type: none;
         padding: 0px 10px;
         li {
-            padding: 7px 0px 7px 0px;
+            padding: 6px 0px 6px 0px;
             &:first-child,
             &:nth-child(2) {
                 display: inline-flex;
@@ -155,7 +189,7 @@ $url_icon:"../img/icon.png";
         list-style-type: none;
         padding: 0px 10px;
         li {
-            padding: 7px 0px 7px 0px;
+            padding: 5px 0px 5px 0px;
             &:first-child,
             &:nth-child(2) {
                 display: inline-table;
@@ -271,44 +305,6 @@ $url_icon:"../img/icon.png";
 @import "right/right";
 @import "footer/footer";
 @import "responsive/responsive";
-body {
-    background: #e4e1e1;
-}
-
-.no-padding {
-    padding: 0px;
-}
-
-.row,
-aside,
-article,
-section,
-.category-science,
-.category-prevent {
-    margin-bottom: 8px !important;
-}
-
-a {
-    text-decoration: none;
-    &:hover,
-    &:focus {
-        text-decoration: none;
-    }
-}
-
-aside>a,
-article>a,
-section>a {
-    display: inline-block;
-    width: 100%;
-}
-
-aside>a>img,
-article>a>img,
-section>a>img {
-    width: 100%;
-}
-
 #breadcrumbs {
     list-style-type: none;
     padding: 0px;
